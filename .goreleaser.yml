@@ -1,0 +1,66 @@
+builds:
+  - id: snowflake
+    main: ./snowflake.go
+    dir: ./client
+    binary: snowflake
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - "386"
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - "6"
+      - "7"
+    ignore:
+      - goos: linux
+        goarch: arm
+        goarm: "7"
+      - goos: windows
+        goarch: arm
+        goarm: "7"
+
+archives:
+  - builds:
+      - snowflake
+    name_template: 'snowflake_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+    replacements:
+      darwin: macOS
+      linux: Linux
+      windows: Windows
+      386: i386
+      amd64: x86_64
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - LICENSE
+
+nfpms:
+  - license: CC0-1.0 License
+    maintainer: Tor Project
+    homepage: https://torproject.net
+    bindir: /usr/local/bin
+    description: Snowflake component
+    replacements:
+      linux: Linux
+    formats:
+      - deb
+      - rpm
+
+checksum:
+  name_template: 'snowflake_checksums.txt'
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - Merge pull request
+      - Merge branch
