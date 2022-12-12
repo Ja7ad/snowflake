@@ -42,8 +42,7 @@ archives:
       - LICENSE
 
 nfpms:
-  - license: CC0-1.0 License
-    maintainer: Tor Project
+  - maintainer: Tor Project
     homepage: https://torproject.net
     bindir: /usr/local/bin
     description: Snowflake component
