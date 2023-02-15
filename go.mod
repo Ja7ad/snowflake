@@ -10,7 +10,7 @@ require (
 	github.com/pion/sdp/v3 v3.0.5
 	github.com/pion/stun v0.3.5
 	github.com/pion/webrtc/v3 v3.1.41
-	github.com/prometheus/client_golang v1.10.0
+	github.com/prometheus/client_golang v1.11.1
 	github.com/prometheus/client_model v0.2.0
 	github.com/refraction-networking/utls v1.0.0
 	github.com/smartystreets/goconvey v1.6.4
@@ -51,7 +51,7 @@ require (
 	github.com/pion/udp v0.1.4 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/prometheus/common v0.18.0 // indirect
+	github.com/prometheus/common v0.26.0 // indirect
 	github.com/prometheus/procfs v0.6.0 // indirect
 	github.com/smartystreets/assertions v0.0.0-20180927180507-b2de0cb4f26d // indirect
 	github.com/templexxx/cpu v0.0.7 // indirect
